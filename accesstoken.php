@@ -31,5 +31,4 @@
 
     //decode to obtain the actual token
     $data = json_decode($response);
-
-    $token = $data->token; 
+    $token = $data->token;
