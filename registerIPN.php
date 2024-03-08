@@ -16,7 +16,7 @@
     );
     $data = array(
         "url" => "$ipnUrl", 
-        "ipn_notification_type" => "GET" 
+        "ipn_notification_type" => "POST" 
     );
     $ch = curl_init($ipnRegistrationUrl);
     curl_setopt($ch, CURLOPT_POST, 1);
@@ -27,7 +27,6 @@
     $responseCode = curl_getinfo($ch, CURLINFO_HTTP_CODE);
     curl_close($ch);
     $data = json_decode($response);
-    echo $ipn_id = $data->ipn_id;
-    // $ipn_url = $data->url;
+    $ipn_id = $data->ipn_id;
 
 
